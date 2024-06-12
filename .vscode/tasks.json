@@ -2,22 +2,19 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: cl.exe 生成活动文件",
-            "command": "cl.exe",
+            "label": "C/C++: g++.exe 生成活动文件",
+            "command": "g++.exe",
             "args": [
-                "/Zi",
-                "/EHsc",
-                "/nologo",
-                "/source-charset:utf-8",
-                "/execution-charset:utf-8",
-                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${file}"
+                "-g",
+                "${fileDirname}\\*.cpp",
+                 "-o",
+                "main.exe",
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": [
-                "$msCompile"
+                "$gcc"
             ],
             "group": {
                 "kind": "build",

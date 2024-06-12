@@ -13,7 +13,7 @@ namespace mydemo
     */
     namespace MY_new
     {
-        void new_M()
+    inline    void new_M()
         {
             //单个对象
             int *a=new int;

@@ -6,7 +6,7 @@ namespace mydemo
 namespace MY_malloc
 {
 //void*  malloc(size_t _Size) 尝试分配_Size大小的内存 失败放回NULL(小概率)
-void malloc_M()
+inline void malloc_M()
 { 
     size_t count =10;
     int *p= (int *) malloc(sizeof(int)*count);
@@ -19,7 +19,7 @@ void malloc_M()
     return;
 }
 //void*  calloc(size_t _Counts,size_t _Size) 尝试分配_Counts个_Size大小的内存并初始化为0 失败放回NULL(小概率)
-void calloc_M()
+inline void calloc_M()
 { 
     size_t count =10;
     int *p= (int *) calloc(count,sizeof(int));
@@ -32,7 +32,7 @@ void calloc_M()
     return;
 }
 //void*  realloc(void * _Block,size_t _Size) 尝试在_Block处重新分配_Size大小的内存 失败放回NULL(小概率)
-void realloc_M()
+inline void realloc_M()
 { 
     //先calloc10个int边赋值0到9边
     size_t count =10;

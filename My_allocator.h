@@ -17,7 +17,7 @@ namespace mydemo
     namespace MY_allocator
     {
    
-    void allocator_M()
+    inline void allocator_M()
     {
         //一个分配器
         allocator<track> Allocator;

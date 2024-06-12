@@ -14,7 +14,7 @@ namespace MY_memory
     int __cdecl memcmp(const void *_Buf1, const void *_Buf2, size_t _Size) 比较两个内存区域的前n个字节是否相等
     */
     //memory.h
-    void MY_memory_M()
+    inline void MY_memory_M()
     {
         int* adderss1=new int[10];
         int* adderss2=new int[10];
@@ -28,7 +28,7 @@ namespace MY_memory
     }
     
     //删除器 调用delete obj delete[] obj 
-    void  MY_default_delete_M()
+    inline void  MY_default_delete_M()
     {
         
         std::default_delete<track> a;
@@ -60,7 +60,7 @@ namespace MY_memory
     ~unique_ptr()：当 unique_ptr 离开作用域时，自动释放所指向的对象，并调用删除器。
     */
    
-    void MY_unique_ptr_M()
+    inline void MY_unique_ptr_M()
     { 
     //构造器
     unique_ptr<track> unip;
@@ -89,7 +89,7 @@ namespace MY_memory
 
     }
 
-     void MY_shared_ptr_M()
+    inline void MY_shared_ptr_M()
     { 
         
     }
